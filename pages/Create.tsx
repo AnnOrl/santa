@@ -4,7 +4,7 @@ import Lightrope from '../components/Lightrope/Lightrope'
 import Hohoho from '../components/Hohoho/Hohoho'
 import {Form, Segment} from 'semantic-ui-react'
 import Container from '../components/Container/Container'
-import styles from './Create.module.css'
+const styles = require('./Create.module.css');
 
 const Create = () => {
     return <div className={styles.root}>
