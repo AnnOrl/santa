@@ -52,6 +52,27 @@
 .menu_small {
   display: flex;
   color: #fac564;
+  font-size: 28px;
+  text-align: right;
+}
+
+.menu_small_showed {
+  display: flex;
+  position: absolute;
+  background: #000;
+  top: 88px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: .9;
+}
+
+.menu_small_showed ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 @media (min-width: 768px) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid, Image, Segment, SemanticCOLORS, Header} from 'semantic-ui-react'
+import {Image, Segment, SemanticCOLORS, Header} from 'semantic-ui-react'
 import Container from '../Container/Container'
 import Lightrope from '../Lightrope/Lightrope'
 
@@ -24,23 +24,21 @@ const Steps = () => (
         <Lightrope/>
         <div className={styles.container}>
             <Container>
-                <Grid columns={3} centered relaxed='very'>
-                    <Grid.Row>
-                        {stepsArr.map(({image, title, content}, key) => <Grid.Column key={key}>
-                            <Segment padded='very' color={colors[key]}>
-                                <div className={styles.column}>
-                                    <Image src={image}/>
-                                    <Header as='h4' color={colors[key]} textAlign='center'>
-                                        <div className={styles.title}> {title}</div>
-                                        <Header.Subheader>
-                                            {content}
-                                        </Header.Subheader>
-                                    </Header>
-                                </div>
-                            </Segment>
-                        </Grid.Column>)}
-                    </Grid.Row>
-                </Grid>
+                <div className={styles.cards}>
+                    {stepsArr.map(({image, title, content}, key) =>
+                        <Segment className={styles.card} color={colors[key]}
+                                 key={key}>
+                            <div className={styles.column}>
+                                <Image src={image}/>
+                                <Header as='h4' color={colors[key]} textAlign='center'>
+                                    <div className={styles.title}> {title}</div>
+                                    <Header.Subheader>
+                                        {content}
+                                    </Header.Subheader>
+                                </Header>
+                            </div>
+                        </Segment>)}
+                </div>
             </Container>
         </div>
     </>

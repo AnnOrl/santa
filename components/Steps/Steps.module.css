@@ -13,3 +13,17 @@
   white-space: nowrap;
   margin-bottom: 12px;
 }
+
+@media (min-width: 576px) {
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+  .cards .card {
+    margin: 0 16px;
+    height: 250px;
+    width: 33%;
+  }
+}
