@@ -1,14 +1,14 @@
 import React from 'react'
-import Head from 'next/head'
+import withAppLayout from '../components/AppLayout/Layout'
+import Banner from '../components/Banner/Banner'
+import Steps from '../components/Steps/Steps'
+
 
 const Home = () => (
-  <div>
-    <Head>
-      <title>Home</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-qqqq
-  </div>
+    <>
+        <Banner/>
+        <Steps/>
+    </>
 )
 
-export default Home
+export default withAppLayout()(Home)

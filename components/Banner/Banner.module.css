@@ -1,0 +1,128 @@
+.container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-image: url('/slider1.jpg');
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.subtitle {
+  font-size: 21px;
+  line-height: 32px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc,
+  0 2px 0 #c9c9c9,
+  0 3px 0 #bbb,
+  0 4px 0 #b9b9b9,
+  0 5px 0 #aaa,
+  0 6px 1px rgba(0,0,0,.1),
+  0 0 5px rgba(0,0,0,.1),
+  0 1px 3px rgba(0,0,0,.3),
+  0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.25),
+  0 10px 10px rgba(0,0,0,.2),
+  0 20px 20px rgba(0,0,0,.15);
+}
+
+.title {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: bold;
+  color: #fac564;
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+}
+
+.button {
+  color: #fff;
+  text-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+  background-color: transparent;
+  border-color: #fac564;
+  box-shadow: 0px 0px 6px rgba(255,255,255,0.7);
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  border-radius: 4px;
+  padding: 12px 16px;
+  transition: all .3s ease-in-out;
+}
+
+.button:hover {
+  background: rgba(250,197,100,0.5);
+  box-shadow: 0px 0px 10px rgba(255,255,255,0.7);
+}
+
+@media (min-width: 576px) {
+  .title {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .subtitle {
+    font-size: 30px;
+    line-height: 42px;
+  }
+
+  .container {
+    height:400px;
+  }
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .subtitle {
+    font-size: 38px;
+    line-height: 45px;
+  }
+
+  .container {
+    height:500px;
+  }
+}
+
+@media (min-width: 992px) {
+  .title {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .subtitle {
+    font-size: 52px;
+    line-height: 58px;
+  }
+
+  .container {
+    height:600px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 56px;
+    line-height: 78px;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .title {
+    font-size: 72px;
+    line-height: 116px;
+  }
+}

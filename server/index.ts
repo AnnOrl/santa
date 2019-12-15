@@ -6,6 +6,8 @@ import bodyParser from "body-parser";
 import {createConnection} from "typeorm";
 import next from "next";
 import {Users} from "./entity/Users"
+import {Results} from "./entity/Results"
+import {Rooms} from "./entity/Rooms"
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({dev})
@@ -22,10 +24,12 @@ app.prepare()
         "database": "i14hqjuugwjrxipn",
         "synchronize": true,
         "logging": false,
-        "entities": [Users],
+        "entities": [Users, Rooms, Results],
     }))
     .then(connection => {
         const userRepository = connection.getRepository(Users);
+        const resRepository = connection.getRepository(Results);
+        const roomsRepository = connection.getRepository(Rooms);
 
         // create and setup express app
         const server = express();
@@ -33,9 +37,17 @@ app.prepare()
 
         // register routes
 
-        server.get("/users", async function (_req: Request, res: Response) {
+        server.get("/api/users", async function (_req: Request, res: Response) {
             const users = await userRepository.find();
             res.json(users);
+        });
+        server.get("/api/rooms", async function (_req: Request, res: Response) {
+            const rooms = await roomsRepository.find();
+            res.json(rooms);
+        });
+        server.get("/api/results", async function (_req: Request, res: Response) {
+            const results = await resRepository.find();
+            res.json(results);
         });
 
         server.all('*', (req, res) => {

@@ -1,0 +1,15 @@
+.container {
+  margin-top: 48px;
+}
+
+.column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  white-space: nowrap;
+  margin-bottom: 12px;
+}

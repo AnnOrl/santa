@@ -1,7 +1,7 @@
 import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
-export class Users {
+export class Results {
 
     @PrimaryGeneratedColumn()
     id: number;
@@ -12,12 +12,17 @@ export class Users {
     index: string;
 
     @Column({
-        length: 100
+        length: 45
     })
-    name: string;
+    index_who: string;
 
     @Column({
-        length: 500
+        length: 45
     })
-    descr: string;
+    index_whom: string;
+
+    @Column({
+        length: 45
+    })
+    index_room: string;
 }

@@ -1,7 +1,7 @@
 import {Entity, Column, PrimaryGeneratedColumn} from "typeorm";
 
 @Entity()
-export class Users {
+export class Rooms {
 
     @PrimaryGeneratedColumn()
     id: number;
@@ -17,7 +17,7 @@ export class Users {
     name: string;
 
     @Column({
-        length: 500
+        length: 11
     })
-    descr: string;
+    max_sum: string;
 }
