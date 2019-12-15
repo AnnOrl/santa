@@ -45,6 +45,11 @@ app.prepare()
             const rooms = await roomsRepository.find();
             res.json(rooms);
         });
+        server.post("/api/rooms", async function (_req: Request, res: Response) {
+            console.log(_req, res);
+            // const rooms = await roomsRepository.find();
+            res.json('yes');
+        });
         server.get("/api/results", async function (_req: Request, res: Response) {
             const results = await resRepository.find();
             res.json(results);

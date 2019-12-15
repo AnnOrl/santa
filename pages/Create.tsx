@@ -1,13 +1,19 @@
-import React from 'react'
+import React, {useCallback, useState} from 'react'
 import withAppLayout from '../components/AppLayout/Layout'
 import Lightrope from '../components/Lightrope/Lightrope'
 import Hohoho from '../components/Hohoho/Hohoho'
 import {Form, Segment, Container, Header} from 'semantic-ui-react'
 import ContainerComponent from '../components/Container/Container'
+import post from '../actions/post'
 
 const styles = require('./Create.module.css');
 
 const Create = () => {
+    const [room, setRoom] = useState({});
+    const handleSubmit = useCallback(()=>{
+        post({url: '/api/rooms', body: {test: 11111}})
+    },[room, setRoom])
+
     return <>
         <Lightrope/>
         <div className={styles.root}>
@@ -23,7 +29,7 @@ const Create = () => {
                 <div className={styles.form_container}>
                     <div className={styles.form}>
                         <Segment>
-                            <Form>
+                            <Form onSubmit={handleSubmit}>
                                 <Form.Input fluid label='Название' placeholder='Название'/>
 
                                 <Form.Group inline>
