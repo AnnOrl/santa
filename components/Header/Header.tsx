@@ -14,7 +14,7 @@ const items = [
 
 const Header = () => {
     const {pathname} = useRouter();
-console.log(pathname);
+
     return <nav className={styles.menuContainer}>
         <Container>
             <Link href='/'>
