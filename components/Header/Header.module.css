@@ -65,6 +65,7 @@
   align-items: center;
   text-align: center;
   opacity: .9;
+  z-index: 1;
 }
 
 .menu_small_showed ul {
