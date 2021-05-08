@@ -37,7 +37,7 @@
     "semantic-ui-react": "^0.88.2",
     "serverless-mysql": "^1.5.1",
     "sql-template-strings": "^2.2.2",
-    "typeorm": "^0.2.21"
+    "typeorm": "^0.2.25"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.5",
